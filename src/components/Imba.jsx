@@ -8,11 +8,13 @@ export const Imba = () => {
         <div>
             <div>
                 <h3>Достоинства</h3>
-                <Button Onbot={()=>setContent('way')}>топ</Button>
-                <Button Onbot={()=>setContent('easy')}>норм</Button>
-                <Button Onbot={()=>setContent('program')}>круто</Button>
+                <Button isActive={content==='way'} Onbot={()=>setContent('way')}>топ</Button>
+                <Button isActive={content==='easy'} Onbot={()=>setContent('easy')}>норм</Button>
+                <Button isActive={content==='program'} Onbot={()=>setContent('program')}>круто</Button>
             </div>
-                <p>{differences[content]}</p>
+                
+                {!content && <p>yyedfwf</p>}
+                {content && <p>{differences[content]}</p>}
         </div>
     )
 }

@@ -1,8 +1,8 @@
 
 
 
-export const Button = ({children,Onbot}) => {
+export const Button = ({children,Onbot,isActive}) => {
     return (
-        <button onClick={Onbot}>{children}</button>
+        <button className={isActive? 'button active' : 'button'} onClick={Onbot}>{children}</button>
     )
 }
